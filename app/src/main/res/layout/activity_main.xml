@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="tech.dylanarndt.howmuchfree.MainActivity">
+
+    <!-- view for MoPub Banner Ad -->
+    <com.mopub.mobileads.MoPubView
+        android:id="@+id/adview"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/ResetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:elevation="0dp"
+        android:text="@string/ResetButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/TaxWithholding"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:maxLength="3"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionNext"
+        android:text="@string/DefaultTaxPercent"
+        android:textAlignment="viewEnd"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/HourlyPayHint" />
+
+    <EditText
+        android:id="@+id/HourlyPayRate"
+        android:layout_width="105dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:text="0.00"
+        android:textAlignment="viewEnd"
+        android:textSize="24sp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/ResetButton" />
+
+
+    <TextView
+        android:id="@+id/TotalHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TotalMadeHint"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/Total"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/Total" />
+
+    <TextView
+        android:id="@+id/PerMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PerMin"
+        android:textAlignment="viewStart"
+        android:textSize="36sp"
+        app:layout_constraintTop_toTopOf="@+id/HourlyPayRate"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/PerSec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PerSec"
+        android:textAlignment="viewStart"
+        android:textSize="36sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/PerMInHint" />
+
+    <EditText
+        android:id="@+id/Hours"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionNext"
+        android:selectAllOnFocus="true"
+        android:text="@string/DefaultHoursValue"
+        android:textAlignment="viewEnd"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="@+id/TaxWithholding"
+        app:layout_constraintTop_toBottomOf="@+id/TaxWithholdingHint" />
+
+    <Button
+        android:id="@+id/GoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Calculate"
+        app:layout_constraintRight_toLeftOf="@+id/ResetButton"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toTopOf="@+id/ResetButton"
+        android:layout_marginTop="0dp" />
+
+    <TextView
+        android:id="@+id/Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TotalMade"
+        android:textSize="36sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/PerSecHInt"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/PerSecHInt" />
+
+    <TextView
+        android:id="@+id/PerSecHInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PerSecHint"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/PerSec"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/PerSec" />
+
+    <TextView
+        android:id="@+id/PerMInHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PerMinHint"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/PerMin"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/PerMin" />
+
+    <TextView
+        android:id="@+id/HoursWorked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/HoursWorked"
+        android:textAlignment="viewEnd"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/Hours" />
+
+    <TextView
+        android:id="@+id/TaxWithholdingHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:text="@string/TaxWithholdingHint"
+        android:textAlignment="viewEnd"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/TaxWithholding" />
+
+    <TextView
+        android:id="@+id/HourlyPayHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/HourlyPayRate"
+        android:textAlignment="viewEnd"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/HourlyPayRate" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:textAlignment="viewEnd"
+        android:textSize="24sp"
+        app:layout_constraintRight_toLeftOf="@+id/HourlyPayRate"
+        android:layout_marginRight="0dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/HourlyPayRate" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
+        android:text="%"
+        android:textAlignment="viewEnd"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/TaxWithholding"
+        app:layout_constraintRight_toLeftOf="@+id/TaxWithholding"
+        android:layout_marginRight="0dp" />
+
+</android.support.constraint.ConstraintLayout>

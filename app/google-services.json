@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "65864172648",
+    "firebase_url": "https://howmuchfree.firebaseio.com",
+    "project_id": "howmuchfree",
+    "storage_bucket": "howmuchfree.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65864172648:android:de7f71a16a36ba7e",
+        "android_client_info": {
+          "package_name": "tech.dylanarndt.howmuchfree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65864172648-d20hafapv0l7m6u033bvjtodg75dcl71.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.dylanarndt.howmuchfree",
+            "certificate_hash": "c2a5c39e2fbabb82b5e29cd5bad9baf96370f47f"
+          }
+        },
+        {
+          "client_id": "65864172648-ol91tlp34gdf1q4hmgcuk3i052p5rnj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkLE77DESSUUf4YOQFAmVl7wboKGvVXeQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65864172648-ol91tlp34gdf1q4hmgcuk3i052p5rnj7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

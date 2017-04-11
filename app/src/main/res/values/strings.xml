@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">How Much is My Time Worth? Free</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="HourlyPayRate">Hourly Pay Rate</string>
+    <string name="TaxWithholding">0%</string>
+    <string name="TotalMade">$0.00</string>
+    <string name="PerMin">$0.00</string>
+    <string name="PerSec">$0.00</string>
+    <string name="TimeStart">Start Time</string>
+    <string name="TimeEnd">End Time</string>
+    <string name="TestToast">Test Toast</string>
+    <string name="ResetButton">Reset</string>
+    <string name="PerSecHint">Money made per second</string>
+    <string name="PerMinHint">Money made per minute</string>
+    <string name="TotalMadeHint">Total money made</string>
+    <string name="TaxWithholdingHint">Taxes to withhold</string>
+    <string name="HoursWorked">Total hours worked</string>
+    <string name="DefaultPayValue">0.00</string>
+    <string name="DefaultHoursValue">0</string>
+    <string name="DefaultTaxPercent">0</string>
+
+
+
+
+    <!-- -
+        This is an ad unit ID for a banner test ad. Replace with your own banner ad unit id.
+        For more information, see https://support.google.com/admob/answer/3052638
+    <!- -->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+
+
+</resources>
